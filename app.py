@@ -12,4 +12,4 @@ def name_response(user):
     print("{} clicked this link!".format(user))
     return "This is a Website!"
 
-app.run()
+app.run(host='0.0.0.0')
