@@ -1,4 +1,6 @@
 from flask import Flask
+import os 
+
 
 app = Flask(__name__)
 
@@ -12,4 +14,5 @@ def name_response(user):
     print("{} clicked this link!".format(user))
     return "This is a Website!"
 
-app.run(host='0.0.0.0')
+port = int(os.environ.get("PORT", 33507))
+app.run(host='0.0.0.0', port=port)
